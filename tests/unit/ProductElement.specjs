@@ -1,0 +1,89 @@
+// import { shallowMount } from "@vue/test-utils";
+// import ProductElement from "@/modules/product/ProductElement";
+
+// const productItem = {
+//   id: 1,
+//   title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+//   price: 109.95,
+//   description:
+//     "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+//   image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+//   rating: {
+//     rate: 3.9,
+//     count: 120,
+//   },
+//   amountInstock: 2,
+// };
+
+// describe("ProductElement.vue", () => {
+//   it("renders props.title when passed", () => {
+//     const wrapper = shallowMount(ProductElement, {
+//       propsData: {
+//         productItem: productItem,
+//       },
+//     });
+//     expect(wrapper.text()).toMatch(productItem.title);
+//   });
+//   it("renders props.price when passed", () => {
+//     const wrapper = shallowMount(ProductElement, {
+//       propsData: {
+//         productItem: productItem,
+//       },
+//     });
+//     expect(wrapper.text()).toMatch(String(productItem.price));
+//   });
+//   it("renders props.description when passed", () => {
+//     const wrapper = shallowMount(ProductElement, {
+//       propsData: {
+//         productItem: productItem,
+//       },
+//     });
+//     expect(wrapper.text()).toMatch(productItem.description);
+//   });
+//   it("renders props.amountInstock when passed", () => {
+//     const wrapper = shallowMount(ProductElement, {
+//       propsData: {
+//         productItem: productItem,
+//       },
+//     });
+//     expect(wrapper.text()).toMatch(String(productItem.amountInstock));
+//   });
+//   it("Check if amountInstock is <= 2 then add 'last-product-in-stock' class ", () => {
+//     productItem.amountInstock = 1;
+//     const wrapper = shallowMount(ProductElement, {
+//       propsData: {
+//         productItem: productItem,
+//       },
+//     });
+//     const divs = wrapper.findAll("v-chip");
+//     const div = divs.at(0);
+//     expect(div.rootNode.children[0].data.class["last-product-in-stock"]).toBe(
+//       true
+//     );
+//   });
+//   it("Check if amountInstock is > 2 then remove 'last-product-in-stock' class ", () => {
+//     productItem.amountInstock = 20;
+
+//     const wrapper = shallowMount(ProductElement, {
+//       propsData: {
+//         productItem: productItem,
+//       },
+//     });
+//     const divs = wrapper.findAll("v-chip");
+//     const div = divs.at(0);
+
+//     expect(div.rootNode.children[0].data.class["last-product-in-stock"]).toBe(
+//       false
+//     );
+//   });
+//   it("Check if img rendered", () => {
+//     const wrapper = shallowMount(ProductElement, {
+//       propsData: {
+//         productItem: productItem,
+//       },
+//     });
+//     const imgs = wrapper.findAll("v-img");
+//     const img = imgs.at(0);
+//     expect(img.vnode.data.attrs.src).toMatch(productItem.image);
+//   });
+// });
